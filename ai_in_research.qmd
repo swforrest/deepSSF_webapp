@@ -1,0 +1,13 @@
+---
+title: "AI in research workshop"
+author: Scott Forrest
+format: html
+---
+
+Testing 
+
+```{r}
+
+print("Hello world")
+
+```
