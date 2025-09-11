@@ -9,5 +9,41 @@ Testing
 ```{r}
 
 print("Hello world")
+plot(1)
 
 ```
+
+Code from online resources
+
+```{r}
+
+library(tidyverse)
+library(readr)
+library(patchwork)
+
+dat <- read_csv(url("https://raw.githubusercontent.com/cbrown5/example-ecological-data/refs/heads/main/data/benthic-reefs-and-fish/fish-coral-cover-sites.csv"))
+
+head(dat)
+summary(dat)
+
+```
+
+New chunk is cmd + shift + i
+
+```{r}
+
+# Define custom red-to-green palette
+custom_colors <- c("#D32F2F", "#ff9900ff", "#4CAF50")
+
+ggplot(dat, aes(x = cb_cover, y = pres.topa)) +
+  geom_point(color = custom_colors[1], alpha = 0.6) +
+  geom_smooth(method = "gam", color = custom_colors[3], fill = custom_colors[2]) +
+  theme_minimal()
+
+  ggplot(dat, aes(x = pres.habili, y = secchi)) +
+  geom_point(color = custom_colors[1], alpha = 0.6) +
+  geom_smooth(method = "gam", color = custom_colors[3], fill = custom_colors[2]) +
+  theme_minimal()
+
+```
+
