@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>AI Generated Report</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="results_files/libs/clipboard/clipboard.min.js"></script>
+<script src="results_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="results_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="results_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="results_files/libs/quarto-html/popper.min.js"></script>
+<script src="results_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="results_files/libs/quarto-html/anchor.min.js"></script>
+<link href="results_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="results_files/libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="results_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="results_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="results_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">AI Generated Report</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="details" class="level2">
+<h2 class="anchored" data-anchor-id="details">Details</h2>
+<p>AI generated content - please verify accuracy and citations. Links go directly to unverified web content, always inspect the link before clicking.</p>
+<p>The model used was perplexity/sonar-deep-research</p>
+</section>
+<section id="content" class="level2">
+<h2 class="anchored" data-anchor-id="content">Content</h2>
+</section>
+<section id="resource-selection-functions-for-animal-gps-tracking-data-in-r-a-comprehensive-statistical-tutorial" class="level1">
+<h1>Resource Selection Functions for Animal GPS Tracking Data in R: A Comprehensive Statistical Tutorial</h1>
+<p>Resource Selection Functions (RSFs) represent a fundamental analytical framework in wildlife ecology for understanding and predicting animal habitat use patterns based on GPS tracking data. This comprehensive analysis reveals that RSFs provide a statistical method to quantify the relative probability of habitat use by comparing environmental characteristics at locations where animals have been observed (“used” sites) with characteristics at locations that were theoretically available but not necessarily used (“available” sites). The implementation of RSFs in R has become increasingly sophisticated, with multiple packages offering complementary approaches ranging from traditional logistic regression frameworks to modern machine learning techniques and integrated step-selection functions that incorporate movement behavior directly into habitat selection models.</p>
+<section id="theoretical-foundations-and-conceptual-framework" class="level2">
+<h2 class="anchored" data-anchor-id="theoretical-foundations-and-conceptual-framework">Theoretical Foundations and Conceptual Framework</h2>
+<p>Resource Selection Functions emerged as a critical tool in wildlife ecology to address fundamental questions about how animals interact with their environment across spatial and temporal scales. The theoretical foundation of RSFs rests on the principle that animals make choices about where to be based on the quality and availability of resources in their environment, and these choices can be quantified statistically to create predictive models of habitat use patterns<a href="https://www.whoi.edu/cms/files/Ecological_Modelling_2002_Boyce_53558.pdf" target="_blank">[6]</a>. A Resource Selection Function is defined as any model that yields values proportional to the probability of use of a resource unit, where resource units can be pixels in a raster map, polygons representing habitat patches, or point locations with associated environmental characteristics<a href="https://www.whoi.edu/cms/files/Ecological_Modelling_2002_Boyce_53558.pdf" target="_blank">[6]</a>.</p>
+<p>The conceptual framework underlying RSFs operates on the assumption that if animals actively select certain habitats over others based on resource quality, availability, or other ecological factors, this selection pattern can be detected and quantified by comparing the environmental characteristics of used locations with those of available locations<a href="https://terpconnect.umd.edu/~egurarie/teaching/SpatialModelling_AKTWS2018/6_RSF_SSF.html" target="_blank">[2]</a>. This comparison forms the basis for developing predictive models that can forecast where animals are likely to occur based on environmental conditions across the landscape. The mathematical formulation of an RSF typically follows the logistic equation: w(x) = exp(β₀ + β₁X₁ + … + βᵢXᵢ), where w(x) represents the relative probability of a pixel being selected, β₀ is the intercept, and βᵢ are the estimated coefficients for environmental variables Xᵢ<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5992917/" target="_blank">[4]</a>.</p>
+<p>The interpretation of RSF coefficients provides direct ecological insights into animal behavior and habitat preferences. When β &gt; 1, this indicates a preference for that particular resource or environmental condition, while β &lt; 1 indicates avoidance of that resource<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5992917/" target="_blank">[4]</a>. This straightforward interpretation makes RSFs particularly valuable for wildlife managers and conservation biologists who need to make evidence-based decisions about habitat management, corridor design, or species conservation strategies. The framework has been extensively validated across numerous species and ecosystems, demonstrating its robustness and general applicability in wildlife research.</p>
+<p>The hierarchical nature of habitat selection, as originally conceptualized by Johnson (1980), provides the theoretical context for RSF applications. Animals make selection decisions at multiple spatial and temporal scales, from broad geographic ranges (first-order selection) to specific feeding sites within a home range (fourth-order selection). RSFs are most commonly applied at the second and third-order selection levels, examining selection of home ranges within landscapes and selection of habitat patches within home ranges, respectively<a href="https://www.whoi.edu/cms/files/Ecological_Modelling_2002_Boyce_53558.pdf" target="_blank">[6]</a>. This hierarchical framework helps researchers design appropriate studies and interpret results within the proper ecological context.</p>
+</section>
+<section id="data-requirements-and-preparation-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="data-requirements-and-preparation-strategies">Data Requirements and Preparation Strategies</h2>
+<p>Implementing RSFs requires careful consideration of data structure, quality, and sampling design to ensure robust and meaningful results. The fundamental data requirement for RSFs includes location data representing “used” sites, typically derived from GPS tracking collars, radio telemetry, or direct observation, paired with environmental covariate data describing habitat characteristics across the study landscape<a href="https://cran.r-project.org/web/packages/amt/vignettes/p3_rsf.html" target="_blank">[5]</a>. Modern GPS tracking technology provides unprecedented opportunities for RSF analysis, as collars can be programmed to record locations at frequent intervals (hourly or sub-hourly), generating thousands of observations per individual animal over extended study periods<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5869366/" target="_blank">[12]</a>.</p>
+<p>The quality and resolution of GPS location data significantly influence RSF model performance and interpretation. Location accuracy varies depending on factors such as canopy cover, topographic relief, and satellite constellation geometry, with typical GPS collar accuracy ranging from 3-30 meters under various field conditions<a href="https://www.ckwri.tamuk.edu/sites/default/files/publication/pdfs/2017/leonard_analyzing_wildlife_telemetry_data_in_r.pdf" target="_blank">[10]</a>. Researchers must account for this measurement error, particularly when analyzing fine-scale habitat selection or when environmental covariates vary at spatial scales comparable to location uncertainty. The temporal resolution of GPS data collection requires careful consideration, as overly frequent sampling can lead to issues with spatial and temporal autocorrelation, while insufficient sampling may miss important behavioral patterns or habitat use dynamics.</p>
+<p>Environmental covariate data forms the second critical component of RSF datasets, requiring spatial layers that characterize habitat conditions across the study area at appropriate scales. Common environmental variables include topographic features (elevation, slope, aspect), vegetation characteristics (land cover type, forest density, biomass indices), disturbance factors (distance to roads, human development, fire history), and resource availability measures (distance to water, prey density, food sources)<a href="https://terpconnect.umd.edu/~egurarie/teaching/SpatialModelling_AKTWS2018/6_RSF_SSF.html" target="_blank">[2]</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5992917/" target="_blank">[4]</a>. The selection of environmental variables should be guided by a priori hypotheses about factors likely to influence animal behavior and habitat use, based on species ecology and previous research findings.</p>
+<p>Data preparation workflows in R typically begin with formatting and cleaning GPS location data, followed by spatial projection to appropriate coordinate systems for analysis. The following code demonstrates basic data preparation steps:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sp)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(raster)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(amt)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Load and format GPS tracking data</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>gps_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"animal_locations.csv"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>gps_data<span class="sc">$</span>timestamp <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(gps_data<span class="sc">$</span>timestamp, <span class="at">format =</span> <span class="st">"%Y-%m-%d %H:%M:%S"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to spatial points and project to UTM</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">coordinates</span>(gps_data) <span class="ot">&lt;-</span> <span class="er">~</span>longitude <span class="sc">+</span> latitude</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">proj4string</span>(gps_data) <span class="ot">&lt;-</span> <span class="fu">CRS</span>(<span class="st">"+init=epsg:4326"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>gps_utm <span class="ot">&lt;-</span> <span class="fu">spTransform</span>(gps_data, <span class="fu">CRS</span>(<span class="st">"+init=epsg:32612"</span>))</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to amt track format</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>track_data <span class="ot">&lt;-</span> <span class="fu">mk_track</span>(gps_utm<span class="sc">@</span>coords[,<span class="dv">1</span>], gps_utm<span class="sc">@</span>coords[,<span class="dv">2</span>], </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>                       gps_data<span class="sc">$</span>timestamp, <span class="at">id =</span> gps_data<span class="sc">$</span>animal_id)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The integration of environmental covariate data requires spatial overlay operations to extract habitat characteristics at each GPS location and at randomly generated available locations. Covariate extraction must account for the spatial and temporal scales at which animals perceive and respond to environmental variation, which may differ from the resolution of available spatial datasets.</p>
+</section>
+<section id="study-design-and-available-location-sampling" class="level2">
+<h2 class="anchored" data-anchor-id="study-design-and-available-location-sampling">Study Design and Available Location Sampling</h2>
+<p>The definition and sampling of “available” locations represents one of the most critical methodological decisions in RSF analysis, as it fundamentally determines what ecological questions the analysis can address and how results should be interpreted<a href="https://www.whoi.edu/cms/files/Ecological_Modelling_2002_Boyce_53558.pdf" target="_blank">[6]</a>. The concept of availability varies depending on the spatial and temporal scale of analysis, the research objectives, and assumptions about animal movement and behavior. At the landscape level, available locations might represent all areas within a species’ geographic range, while at the home range level, availability might be constrained to areas accessible to an individual animal during the study period.</p>
+<p>Several approaches exist for defining and sampling available locations, each with distinct advantages and assumptions. The most common approach involves generating random points within a defined study area, such as a minimum convex polygon encompassing all used locations, a kernel home range estimate, or a predetermined landscape boundary<a href="https://cran.r-project.org/web/packages/amt/vignettes/p3_rsf.html" target="_blank">[5]</a><a href="https://rdrr.io/cran/amt/man/random_points.html" target="_blank">[8]</a>. The number of available points generated typically ranges from equal to the number of used locations (1:1 ratio) to ten times the number of used locations (1:10 ratio), with higher ratios generally improving model performance but increasing computational requirements<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5992917/" target="_blank">[4]</a>.</p>
+<p>Alternative approaches to availability sampling include using a systematic grid of points across the study area, generating random points within circular buffers around each used location (creating a case-control design), or using time-matched random locations that maintain the same temporal distribution as used locations<a href="https://ecosystems.psu.edu/research/labs/walter-lab/manual/chapter-8-resource-selection/8-4-resource-selection-functions" target="_blank">[1]</a>. Each approach carries different assumptions about animal movement capabilities, habitat accessibility, and the temporal dynamics of resource availability. The choice among these approaches should align with the specific research questions and the ecological characteristics of the study species.</p>
+<p>The <code>amt</code> package in R provides comprehensive functionality for generating available locations using various sampling strategies:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(amt)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 1: Random points within home range</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>hr_mcp <span class="ot">&lt;-</span> <span class="fu">hr_mcp</span>(track_data, <span class="at">level =</span> <span class="fl">0.95</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>available_pts <span class="ot">&lt;-</span> <span class="fu">random_points</span>(hr_mcp, <span class="at">n =</span> <span class="dv">1000</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 2: Random points for each individual</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>available_by_id <span class="ot">&lt;-</span> track_data <span class="sc">%&gt;%</span> </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">nest</span>(<span class="at">data =</span> <span class="sc">-</span>id) <span class="sc">%&gt;%</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">random_pts =</span> <span class="fu">map</span>(data, <span class="sc">~</span><span class="fu">random_points</span>(.x, <span class="at">n =</span> <span class="fu">nrow</span>(.x) <span class="sc">*</span> <span class="dv">5</span>)))</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 3: Buffer-based availability sampling</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>buffer_availability <span class="ot">&lt;-</span> <span class="cf">function</span>(used_points, <span class="at">buffer_radius =</span> <span class="dv">500</span>, <span class="at">n_points =</span> <span class="dv">5</span>) {</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  buffers <span class="ot">&lt;-</span> <span class="fu">st_buffer</span>(used_points, <span class="at">dist =</span> buffer_radius)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">random_points</span>(buffers, <span class="at">n =</span> n_points)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Temporal considerations in availability sampling become particularly important for species with seasonal habitat use patterns or daily activity cycles. Time-matched available locations ensure that the temporal distribution of available points matches that of used points, controlling for temporal variation in resource availability or sampling effort<a href="https://ecosystems.psu.edu/research/labs/walter-lab/manual/chapter-8-resource-selection/link-to-pdf/@@download/file/Chapter08_2016.pdf" target="_blank">[11]</a>. This approach is especially relevant for species with strong circadian rhythms or seasonal migration patterns where habitat availability varies systematically over time.</p>
+</section>
+<section id="implementation-framework-using-r-packages" class="level2">
+<h2 class="anchored" data-anchor-id="implementation-framework-using-r-packages">Implementation Framework Using R Packages</h2>
+<p>The implementation of RSFs in R benefits from a rich ecosystem of specialized packages, each offering unique capabilities and approaches to different aspects of the analysis workflow. The <code>amt</code> (Animal Movement Tools) package has emerged as a comprehensive platform for modern RSF analysis, providing integrated workflows that seamlessly handle data preparation, availability sampling, covariate extraction, and model fitting<a href="https://cran.r-project.org/web/packages/amt/vignettes/p3_rsf.html" target="_blank">[5]</a>. The package’s design philosophy emphasizes reproducible analysis pipelines using tidy data principles and pipe-based workflows that enhance code readability and maintenance.</p>
+<p>The <code>adehabitatHR</code> package provides foundational capabilities for home range estimation that often serve as the basis for defining availability domains in RSF analyses<a href="https://cran.r-project.org/web/packages/adehabitatHR/vignettes/adehabitatHR.pdf" target="_blank">[9]</a>. This package implements various home range estimators including minimum convex polygons (MCP), kernel density estimators with multiple bandwidth selection methods, and local convex hull methods. These home range estimates frequently define the spatial extent within which available locations are sampled, making <code>adehabitatHR</code> an essential component of many RSF workflows.</p>
+<p>For researchers requiring more advanced statistical modeling capabilities, the <code>ctmm</code> package offers integrated RSF approaches that simultaneously estimate movement parameters and habitat selection coefficients<a href="https://cran.r-project.org/web/packages/ctmm/ctmm.pdf" target="_blank">[7]</a>. This integrated approach addresses some limitations of traditional RSF methods by explicitly accounting for the movement process that generates location data, potentially providing more accurate and interpretable results for species with complex movement patterns.</p>
+<p>The following code demonstrates a complete RSF workflow using the <code>amt</code> package framework:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(amt)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(raster)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load example data</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"deer"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"sh_forest"</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare tracking data and generate available locations</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>rsf_data <span class="ot">&lt;-</span> deer <span class="sc">%&gt;%</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Generate random points (availability sampling)</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">random_points</span>(<span class="at">n =</span> <span class="fu">nrow</span>(deer) <span class="sc">*</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Extract environmental covariates</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">extract_covariates</span>(sh_forest) <span class="sc">%&gt;%</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create forest cover variable</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">forest =</span> <span class="fu">factor</span>(sh_forest, <span class="at">levels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"forest"</span>, <span class="st">"non-forest"</span>)),</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add quadratic elevation term</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">elevation_sq =</span> elevation<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Examine data structure</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(rsf_data)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(rsf_data<span class="sc">$</span>case_)  <span class="co"># TRUE = used, FALSE = available</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit RSF model using logistic regression</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>rsf_model <span class="ot">&lt;-</span> rsf_data <span class="sc">%&gt;%</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit_rsf</span>(case_ <span class="sc">~</span> forest <span class="sc">+</span> elevation <span class="sc">+</span> elevation_sq)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Model summary and interpretation</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(rsf_model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Package selection often depends on specific research objectives and data characteristics. For basic RSF analyses with standard logistic regression approaches, <code>amt</code> provides the most streamlined workflow. For complex multi-level models with random effects to account for individual variation, researchers might combine <code>amt</code> for data preparation with <code>lme4</code> for model fitting. For machine learning approaches to RSF modeling, integration with packages like <code>randomForest</code> or <code>ranger</code> can provide enhanced predictive performance for complex ecological relationships<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5869366/" target="_blank">[12]</a>.</p>
+<p>The modular nature of R package ecosystems allows researchers to combine tools from different packages based on their specific needs. A typical workflow might use <code>adehabitatHR</code> for home range estimation, <code>amt</code> for data preparation and basic model fitting, <code>raster</code> for spatial data manipulation, and <code>ggplot2</code> for visualization. This flexibility enables customization of analysis workflows to match specific research requirements while leveraging the strengths of specialized tools.</p>
+</section>
+<section id="statistical-modeling-and-model-selection" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-modeling-and-model-selection">Statistical Modeling and Model Selection</h2>
+<p>The statistical foundation of RSFs typically employs logistic regression frameworks to model the binary response variable representing used versus available locations<a href="https://www.whoi.edu/cms/files/Ecological_Modelling_2002_Boyce_53558.pdf" target="_blank">[6]</a>. The choice between fixed-effects and mixed-effects models depends on the study design and whether individual variation in habitat selection needs to be explicitly modeled. Mixed-effects logistic regression becomes necessary when data include multiple individuals, as it accounts for individual-level variation in habitat selection while estimating population-level patterns<a href="https://ecosystems.psu.edu/research/labs/walter-lab/manual/chapter-8-resource-selection/8-4-resource-selection-functions" target="_blank">[1]</a>. The inclusion of random effects helps address issues of pseudoreplication that arise when multiple observations come from the same individual.</p>
+<p>Model selection in RSF analysis should be guided by biological hypotheses rather than purely statistical criteria, although information-theoretic approaches such as Akaike’s Information Criterion (AIC) provide valuable tools for comparing biologically plausible candidate models<a href="https://www.whoi.edu/cms/files/Ecological_Modelling_2002_Boyce_53558.pdf" target="_blank">[6]</a>. The development of candidate model sets should be based on a priori hypotheses about factors influencing habitat selection, derived from species ecology, previous research, and field observations. This hypothesis-driven approach helps ensure that statistical models address meaningful ecological questions rather than simply achieving optimal statistical fit.</p>
+<p>Covariate selection and model structure require careful consideration of potential collinearity among environmental variables, non-linear relationships, and interaction effects. Correlation analysis and variance inflation factor (VIF) calculations help identify problematic collinearity that can lead to unstable parameter estimates and difficult interpretation<a href="https://ecosystems.psu.edu/research/labs/walter-lab/manual/chapter-8-resource-selection/8-4-resource-selection-functions" target="_blank">[1]</a>. Non-linear relationships can be accommodated through polynomial terms, spline functions, or categorical transformation of continuous variables. Interaction effects between environmental variables often reveal ecologically meaningful patterns, such as how the importance of one habitat feature depends on the availability of others.</p>
+<p>The following code demonstrates model fitting and selection procedures:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MuMIn)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit candidate models with individual random effects</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">glmer</span>(case_ <span class="sc">~</span> forest <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>individual_id), </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">data =</span> rsf_data, <span class="at">family =</span> binomial)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">glmer</span>(case_ <span class="sc">~</span> forest <span class="sc">+</span> elevation <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>individual_id), </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">data =</span> rsf_data, <span class="at">family =</span> binomial)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">glmer</span>(case_ <span class="sc">~</span> forest <span class="sc">*</span> elevation <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>individual_id), </span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>                <span class="at">data =</span> rsf_data, <span class="at">family =</span> binomial)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>model4 <span class="ot">&lt;-</span> <span class="fu">glmer</span>(case_ <span class="sc">~</span> forest <span class="sc">+</span> elevation <span class="sc">+</span> <span class="fu">I</span>(elevation<span class="sc">^</span><span class="dv">2</span>) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>individual_id), </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>                <span class="at">data =</span> rsf_data, <span class="at">family =</span> binomial)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare models using AIC</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>model_list <span class="ot">&lt;-</span> <span class="fu">list</span>(model1, model2, model3, model4)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>model_names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"forest_only"</span>, <span class="st">"forest_elevation"</span>, <span class="st">"forest_elevation_interaction"</span>, <span class="st">"forest_elevation_quadratic"</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(model_list) <span class="ot">&lt;-</span> model_names</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate AIC values and weights</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>aic_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">model =</span> model_names,</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">AIC =</span> <span class="fu">sapply</span>(model_list, AIC),</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">delta_AIC =</span> AIC <span class="sc">-</span> <span class="fu">min</span>(AIC),</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">weight =</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.5</span> <span class="sc">*</span> delta_AIC) <span class="sc">/</span> <span class="fu">sum</span>(<span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.5</span> <span class="sc">*</span> delta_AIC))</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(AIC)</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(aic_table)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Advanced modeling techniques can address specific challenges in RSF analysis. Conditional logistic regression provides an alternative approach that creates matched case-control sets, with each used location paired with a set of available locations<a href="https://cran.r-project.org/web/packages/amt/vignettes/p4_SSF.html" target="_blank">[15]</a>. This approach can be particularly useful when availability varies spatially or temporally across the study area. Step-Selection Functions (SSFs) represent an evolution of RSF methodology that incorporates movement behavior directly into habitat selection models by analyzing the selection of movement steps rather than discrete locations<a href="https://cran.r-project.org/web/packages/amt/vignettes/p4_SSF.html" target="_blank">[15]</a>.</p>
+<p>Machine learning approaches to RSF modeling have gained attention for their ability to capture complex non-linear relationships and interactions without requiring explicit specification of functional forms<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5869366/" target="_blank">[12]</a>. Random Forest models, in particular, show promise for RSF applications due to their ability to handle mixed data types, resistance to overfitting, and capacity to model complex ecological relationships. However, machine learning approaches may sacrifice interpretability for predictive performance, requiring careful consideration of research objectives when choosing between traditional and machine learning RSF approaches.</p>
+</section>
+<section id="model-validation-and-performance-assessment" class="level2">
+<h2 class="anchored" data-anchor-id="model-validation-and-performance-assessment">Model Validation and Performance Assessment</h2>
+<p>Proper validation of RSF models is essential for assessing model performance, reliability, and generalizability to new data or different spatial or temporal contexts<a href="https://www.whoi.edu/cms/files/Ecological_Modelling_2002_Boyce_53558.pdf" target="_blank">[6]</a>. The most widely adopted validation approach for RSFs is k-fold cross-validation, where the dataset is randomly divided into k subsets, with models fitted to k-1 subsets and tested on the remaining subset<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5992917/" target="_blank">[4]</a>. This process is repeated k times to obtain robust estimates of model performance across different data partitions. Five-fold or ten-fold cross-validation are commonly used, providing a balance between computational efficiency and reliable performance estimates.</p>
+<p>The Boyce index has emerged as a particularly valuable metric for RSF validation, as it specifically evaluates how well models predict the relative probability of use across different habitat conditions<a href="https://www.whoi.edu/cms/files/Ecological_Modelling_2002_Boyce_53558.pdf" target="_blank">[6]</a>. Unlike measures based on classification accuracy, the Boyce index assesses whether areas predicted to have high probability of use actually contain more locations than areas predicted to have low probability of use. This approach aligns well with the RSF framework’s focus on relative probability rather than absolute prediction.</p>
+<p>Cross-validation implementation requires careful partitioning strategies, particularly when dealing with telemetry data from multiple individuals or time periods. Spatial or temporal blocking may be necessary to avoid overly optimistic performance estimates that result from spatial or temporal autocorrelation in the data<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5992917/" target="_blank">[4]</a>. Individual-based partitioning, where entire individuals are held out from training data, provides more conservative but realistic estimates of model transferability to new individuals.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(amt)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Implement k-fold cross-validation for RSF</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>perform_rsf_cv <span class="ot">&lt;-</span> <span class="cf">function</span>(data, formula, <span class="at">k =</span> <span class="dv">5</span>) {</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create fold assignments</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  data<span class="sc">$</span>fold <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>k, <span class="at">length.out =</span> <span class="fu">nrow</span>(data)))</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  results <span class="ot">&lt;-</span> <span class="fu">tibble</span>()</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>k) {</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Split data</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    train_data <span class="ot">&lt;-</span> data[data<span class="sc">$</span>fold <span class="sc">!=</span> i, ]</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    test_data <span class="ot">&lt;-</span> data[data<span class="sc">$</span>fold <span class="sc">==</span> i, ]</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fit model on training data</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    model <span class="ot">&lt;-</span> train_data <span class="sc">%&gt;%</span> <span class="fu">fit_rsf</span>(formula)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Predict on test data</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(model, test_data)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate performance metrics</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    fold_results <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>      <span class="at">fold =</span> i,</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>      <span class="at">auc =</span> <span class="fu">calculate_auc</span>(test_data<span class="sc">$</span>case_, predictions),</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>      <span class="at">boyce_index =</span> <span class="fu">calculate_boyce_index</span>(test_data, predictions)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    results <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(results, fold_results)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(results)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply cross-validation</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>cv_results <span class="ot">&lt;-</span> <span class="fu">perform_rsf_cv</span>(rsf_data, case_ <span class="sc">~</span> forest <span class="sc">+</span> elevation)</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(cv_results)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Alternative validation approaches include temporal validation, where models are fitted to data from one time period and tested on data from another period, and spatial validation, where models are fitted to data from one geographic area and tested on data from different areas<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5992917/" target="_blank">[4]</a>. These approaches provide insights into model transferability across different contexts and help identify the spatial and temporal scales at which RSF models remain valid.</p>
+<p>Performance visualization helps communicate model quality and identify potential issues with model specification or data quality. Receiver Operating Characteristic (ROC) curves and Area Under the Curve (AUC) values provide standard metrics for binary classification performance, while binned gain charts specifically designed for RSF applications show how well models discriminate among different levels of habitat quality<a href="https://www.whoi.edu/cms/files/Ecological_Modelling_2002_Boyce_53558.pdf" target="_blank">[6]</a>. Residual analysis can reveal systematic patterns in model misfit that suggest missing covariates or inappropriate functional forms.</p>
+</section>
+<section id="visualization-and-spatial-prediction" class="level2">
+<h2 class="anchored" data-anchor-id="visualization-and-spatial-prediction">Visualization and Spatial Prediction</h2>
+<p>Effective visualization of RSF results serves multiple purposes: communicating findings to diverse audiences, identifying spatial patterns in habitat selection, and creating management-relevant habitat quality maps<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5992917/" target="_blank">[4]</a>. The most common visualization approach involves creating continuous probability surfaces across the study landscape, where each pixel’s value represents the relative probability of use based on local environmental conditions. These surfaces can be displayed using color gradients, with warmer colors typically representing higher probability of use and cooler colors representing lower probability areas.</p>
+<p>The creation of RSF prediction maps requires applying fitted models to environmental covariate layers across the entire study area<a href="https://ecosystems.psu.edu/research/labs/walter-lab/manual/chapter-8-resource-selection/8-4-resource-selection-functions" target="_blank">[1]</a>. This process involves extracting covariate values for each pixel in the study area, applying the logistic equation with estimated model coefficients, and creating a spatially continuous surface of predicted values. The spatial resolution of prediction maps should match the scale at which habitat selection decisions are made and the resolution of available environmental data.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(raster)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create prediction surface across study area</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>create_rsf_map <span class="ot">&lt;-</span> <span class="cf">function</span>(model, covariate_stack) {</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Extract covariate values for all pixels</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  prediction_data <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(covariate_stack, <span class="at">xy =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">na.omit</span>()</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Apply RSF model to predict relative probability of use</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  prediction_data<span class="sc">$</span>probability <span class="ot">&lt;-</span> <span class="fu">predict</span>(model, prediction_data, <span class="at">type =</span> <span class="st">"response"</span>)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Convert back to raster</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  prediction_raster <span class="ot">&lt;-</span> <span class="fu">rasterFromXYZ</span>(prediction_data[, <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"y"</span>, <span class="st">"probability"</span>)])</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(prediction_raster)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate prediction map</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>rsf_surface <span class="ot">&lt;-</span> <span class="fu">create_rsf_map</span>(rsf_model, covariate_stack)</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize results</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(rsf_surface, <span class="at">main =</span> <span class="st">"RSF Probability Surface"</span>, </span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="fu">terrain.colors</span>(<span class="dv">100</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Classification of continuous RSF surfaces into discrete habitat quality categories facilitates interpretation and management applications<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5992917/" target="_blank">[4]</a>. Common classification approaches include equal-interval classification, quantile-based classification, and equal-area classification. Quantile-based classification creates bins containing equal numbers of pixels, which can be useful for identifying the relative distribution of habitat quality across the landscape. Equal-area classification ensures that each habitat quality class covers the same geographic area, which may be more appropriate for certain management applications.</p>
+<p>The integration of RSF results with other spatial data layers enhances interpretation and management relevance. Overlaying RSF surfaces with land ownership boundaries, protected area boundaries, or proposed development areas helps identify conservation priorities and potential management conflicts. Time-series analysis of RSF surfaces can reveal temporal changes in habitat quality due to disturbance, succession, or management activities.</p>
+<p>Uncertainty visualization provides critical information about model confidence across different areas of the landscape<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5992917/" target="_blank">[4]</a>. Prediction intervals can be calculated through bootstrapping or Monte Carlo methods, showing areas where model predictions are more or less reliable. Areas with high prediction uncertainty may require additional data collection or alternative management approaches that account for uncertainty in habitat quality assessments.</p>
+</section>
+<section id="advanced-topics-and-extensions" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-topics-and-extensions">Advanced Topics and Extensions</h2>
+<p>Step-Selection Functions represent a significant advancement in RSF methodology by explicitly incorporating animal movement behavior into habitat selection models<a href="https://cran.r-project.org/web/packages/amt/vignettes/p4_SSF.html" target="_blank">[15]</a>. Unlike traditional RSFs that analyze point locations independently, SSFs examine the selection of movement steps, comparing the environmental characteristics of observed steps with those of alternative steps the animal could have taken. This approach provides insights into how movement costs and habitat preferences interact to shape animal space use patterns.</p>
+<p>The implementation of SSFs requires generating alternative movement options for each observed step, typically by sampling from distributions of step lengths and turning angles derived from the movement data<a href="https://conservancy.umn.edu/bitstreams/63727072-87b1-4b35-b81c-8fd31b8f1e57/download" target="_blank">[17]</a>. The <code>amt</code> package provides comprehensive functionality for SSF analysis, including tools for step generation, covariate extraction, and model fitting using conditional logistic regression frameworks.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step-Selection Function implementation</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ssf_analysis <span class="ot">&lt;-</span> deer <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Resample to regular time intervals</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">track_resample</span>(<span class="at">rate =</span> <span class="fu">hours</span>(<span class="dv">2</span>), <span class="at">tolerance =</span> <span class="fu">minutes</span>(<span class="dv">15</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Convert to steps</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">steps_by_burst</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Generate random alternative steps</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">random_steps</span>(<span class="at">n_control =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Extract covariates at step endpoints</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">extract_covariates</span>(covariate_stack) <span class="sc">%&gt;%</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Fit SSF model</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit_clogit</span>(case_ <span class="sc">~</span> forest <span class="sc">+</span> elevation <span class="sc">+</span> <span class="fu">strata</span>(step_id_))</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(ssf_analysis)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Machine learning approaches to RSF modeling offer opportunities to capture complex ecological relationships without requiring explicit specification of functional forms<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5869366/" target="_blank">[12]</a>. Random Forest models have shown particular promise for RSF applications, demonstrating superior predictive performance compared to traditional logistic regression approaches in many contexts. However, the increased predictive performance often comes at the cost of interpretability, requiring careful consideration of research objectives when choosing between traditional and machine learning approaches.</p>
+<p>Integrated Step-Selection Functions (iSSFs) represent the cutting edge of movement-based habitat selection analysis, simultaneously modeling movement parameters and habitat selection coefficients<a href="https://conservancy.umn.edu/bitstreams/63727072-87b1-4b35-b81c-8fd31b8f1e57/download" target="_blank">[17]</a>. These models explicitly account for the movement process that generates location data, potentially providing more accurate and biologically meaningful results. The implementation of iSSFs requires specialized software and advanced statistical expertise but offers the most sophisticated approach currently available for analyzing habitat selection from movement data.</p>
+<p>Multi-scale RSF approaches address the hierarchical nature of habitat selection by simultaneously analyzing selection patterns at multiple spatial scales<a href="https://ecosystems.psu.edu/research/labs/walter-lab/manual/chapter-8-resource-selection/link-to-pdf/@@download/file/Chapter08_2016.pdf" target="_blank">[11]</a>. These approaches can reveal how habitat selection patterns vary across scales and identify the spatial scales at which different environmental factors become important. Multi-scale analysis requires careful consideration of covariate measurement scales and may involve nested model structures or explicit multi-level modeling frameworks.</p>
+<p>The integration of RSF approaches with population-level analyses provides opportunities to link individual habitat selection patterns with population-level outcomes such as survival, reproduction, or population growth<a href="https://www.whoi.edu/cms/files/Ecological_Modelling_2002_Boyce_53558.pdf" target="_blank">[6]</a>. These integrated approaches can help identify habitat characteristics that are most important for population persistence and inform conservation strategies that focus on maintaining or enhancing critical habitat features. Such analyses require long-term datasets that include both movement and demographic information, making them challenging but potentially highly valuable for conservation applications.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Resource Selection Functions have evolved into a sophisticated and versatile analytical framework that provides critical insights into animal-habitat relationships across diverse ecological contexts. The implementation of RSFs in R benefits from a mature ecosystem of specialized packages that offer integrated workflows for data preparation, model fitting, validation, and visualization. The <code>amt</code> package has emerged as a comprehensive platform for modern RSF analysis, providing streamlined workflows that incorporate best practices for study design, statistical analysis, and result interpretation.</p>
+<p>The continued development of RSF methodology reflects the growing sophistication of wildlife tracking technology and the increasing availability of high-resolution environmental data. Step-Selection Functions and integrated approaches that incorporate movement behavior directly into habitat selection models represent important advances that provide more mechanistic understanding of animal space use patterns. Machine learning approaches offer enhanced predictive capabilities for complex ecological relationships, though they require careful consideration of the trade-offs between predictive performance and interpretability.</p>
+<p>Future developments in RSF methodology will likely focus on addressing remaining challenges in model validation, uncertainty quantification, and integration across multiple scales and data types. The incorporation of remote sensing data, environmental sensor networks, and citizen science observations provides opportunities for more comprehensive and temporally dynamic RSF analyses. As wildlife tracking technology continues to advance and environmental monitoring capabilities expand, RSFs will remain a cornerstone analytical tool for understanding and predicting animal-habitat relationships in support of conservation and management objectives.</p>
+</section>
+<section id="reasoning" class="level2">
+<h2 class="anchored" data-anchor-id="reasoning">Reasoning</h2>
+<p>This is a comprehensive query about Resource Selection Functions (RSFs) for animal GPS tracking data in R. Based on the search results provided, I need to create a detailed tutorial-style report that covers:</p>
+<ol type="1">
+<li>Background on RSFs - what they are, why they’re used, theoretical foundations</li>
+<li>Data requirements and preparation</li>
+<li>Statistical methods and approaches</li>
+<li>Practical implementation in R with sample code</li>
+<li>Model evaluation and validation</li>
+<li>Visualization and interpretation</li>
+</ol>
+<p>The search results provide excellent technical content from various sources including: - Penn State University research lab materials - University of Maryland teaching materials - Academic papers on RSF methodology - R package documentation (amt, adehabitatHR, etc.) - Practical tutorials and vignettes</p>
+<p>Let me structure this as a comprehensive tutorial report covering both the conceptual background and practical implementation, keeping it under 5000 words as requested in the personalization section, while including plenty of R code examples.</p>
+<p>Key sections I should cover: 1. Introduction and theoretical background 2. Data preparation and requirements 3. Study design considerations (used vs available) 4. Implementation in R with multiple packages 5. Model fitting and selection 6. Validation and evaluation 7. Visualization and mapping 8. Advanced topics (SSFs, machine learning approaches)</p>
+<p>I’ll make sure to cite the search results appropriately and provide comprehensive R code examples throughout.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ol type="1">
+<li><a href="https://ecosystems.psu.edu/research/labs/walter-lab/manual/chapter-8-resource-selection/8-4-resource-selection-functions" target="_blank">ecosystems.psu.edu/research/labs/walter-lab/manual/chapter-8-resource-selection/8-4-resource-selection-functions</a></li>
+<li><a href="https://terpconnect.umd.edu/~egurarie/teaching/SpatialModelling_AKTWS2018/6_RSF_SSF.html" target="_blank">terpconnect.umd.edu/~egurarie/teaching/SpatialModelling_AKTWS2018/6_RSF_SSF.html</a></li>
+<li><a href="http://www.danaseidel.com/MovEco-R-Workshop/Materials/Day5/HongKongMovement2018Lec5.pdf" target="_blank">www.danaseidel.com/MovEco-R-Workshop/Materials/Day5/HongKongMovement2018Lec5.pdf</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5992917/" target="_blank">pmc.ncbi.nlm.nih.gov/articles/PMC5992917/</a></li>
+<li><a href="https://cran.r-project.org/web/packages/amt/vignettes/p3_rsf.html" target="_blank">cran.r-project.org/web/packages/amt/vignettes/p3_rsf.html</a></li>
+<li><a href="https://www.whoi.edu/cms/files/Ecological_Modelling_2002_Boyce_53558.pdf" target="_blank">www.whoi.edu/cms/files/Ecological_Modelling_2002_Boyce_53558.pdf</a></li>
+<li><a href="https://cran.r-project.org/web/packages/ctmm/ctmm.pdf" target="_blank">cran.r-project.org/web/packages/ctmm/ctmm.pdf</a></li>
+<li><a href="https://rdrr.io/cran/amt/man/random_points.html" target="_blank">rdrr.io/cran/amt/man/random_points.html</a></li>
+<li><a href="https://cran.r-project.org/web/packages/adehabitatHR/vignettes/adehabitatHR.pdf" target="_blank">cran.r-project.org/web/packages/adehabitatHR/vignettes/adehabitatHR.pdf</a></li>
+<li><a href="https://www.ckwri.tamuk.edu/sites/default/files/publication/pdfs/2017/leonard_analyzing_wildlife_telemetry_data_in_r.pdf" target="_blank">www.ckwri.tamuk.edu/sites/default/files/publication/pdfs/2017/leonard_analyzing_wildlife_telemetry_data_in_r.pdf</a></li>
+<li><a href="https://ecosystems.psu.edu/research/labs/walter-lab/manual/chapter-8-resource-selection/link-to-pdf/@@download/file/Chapter08_2016.pdf" target="_blank">ecosystems.psu.edu/research/labs/walter-lab/manual/chapter-8-resource-selection/link-to-pdf/@<span class="citation" data-cites="download/file/Chapter08_2016.pdf">@download/file/Chapter08_2016.pdf</span></a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5869366/" target="_blank">pmc.ncbi.nlm.nih.gov/articles/PMC5869366/</a></li>
+<li><a href="https://conservancy.umn.edu/bitstreams/6bd35be1-a2d9-47de-bad0-efd97723de20/download" target="_blank">conservancy.umn.edu/bitstreams/6bd35be1-a2d9-47de-bad0-efd97723de20/download</a></li>
+<li><a href="https://github.com/jamesepaterson/trackingworkshop" target="_blank">github.com/jamesepaterson/trackingworkshop</a></li>
+<li><a href="https://cran.r-project.org/web/packages/amt/vignettes/p4_SSF.html" target="_blank">cran.r-project.org/web/packages/amt/vignettes/p4_SSF.html</a></li>
+<li><a href="https://cran.r-project.org/view=Tracking" target="_blank">cran.r-project.org/view=Tracking</a></li>
+<li><a href="https://conservancy.umn.edu/bitstreams/63727072-87b1-4b35-b81c-8fd31b8f1e57/download" target="_blank">conservancy.umn.edu/bitstreams/63727072-87b1-4b35-b81c-8fd31b8f1e57/download</a></li>
+</ol>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
